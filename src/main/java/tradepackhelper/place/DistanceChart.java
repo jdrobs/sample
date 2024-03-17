@@ -12,7 +12,7 @@ public class DistanceChart {
 
 	
 	/**
-	 * DistanceChart has the EnumMap that contains distances between the places. When 
+	 * DistanceChart has the EnumMap that contains distances between the {@link Place Places}. When 
 	 * adding a new place, only one direction of distances is needed as the distance 
 	 * from A to B is equal to the distance from B to A.
 	 */
@@ -57,10 +57,10 @@ public class DistanceChart {
 	}
 
 	/**
-	 * Gets the distance between two places. 
-	 * @param from - the place where the pack is starting from
-	 * @param to - the destination where the pack will be sold
-	 * @return int that represents the amount of tiles between the two locations
+	 * Gets the distance between two {@link Place Places}. 
+	 * @param from - the {@link Place} where the {@link tradepackhelper.tradepack.Tradepack Tradepack} is starting from
+	 * @param to - the {@link Place} where the {@link tradepackhelper.tradepack.Tradepack Tradepack} will be sold
+	 * @return int that represents the amount of tiles between the two {@link Place Places}
 	 */
 	public int getDistance(Place from, Place to) {
 		if (from == null || to == null) 

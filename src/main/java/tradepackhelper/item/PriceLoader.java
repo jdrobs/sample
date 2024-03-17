@@ -41,9 +41,9 @@ public class PriceLoader {
 	}
 
 	/**
-	 * Opens the spreadsheet and looks for the price for the specified item. The most recent price
+	 * Opens the spreadsheet and looks for the price for the specified {@link Item}. The most recent price
 	 * should be placed on the bottom of the column and it will return -1 if the item isnt found.
-	 * @param itemName - item to load price from excel file
+	 * @param itemName - {@link Item} to load price from excel file
 	 * @return the most updated price
 	 * @throws IOException
 	 */
