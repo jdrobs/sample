@@ -1,4 +1,4 @@
-package tradepackhelper;
+package tradepackhelper.place;
 
 import java.util.EnumSet;
 import java.util.Iterator;

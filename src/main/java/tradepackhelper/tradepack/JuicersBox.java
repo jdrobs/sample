@@ -3,6 +3,8 @@ package tradepackhelper.tradepack;
 import java.util.HashMap;
 import java.util.Map;
 
+import tradepackhelper.item.Item;
+
 public class JuicersBox extends Tradepack {
 
 	public JuicersBox() {
@@ -12,7 +14,7 @@ public class JuicersBox extends Tradepack {
 		contents.put(Item.CHERRY, 5);
 		contents.put(Item.BANANA, 3);
 		this.items = contents;
-		
+
 	}
 
 }

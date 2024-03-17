@@ -1,11 +1,9 @@
-package tradepackhelper.tradepack;
+package tradepackhelper.item;
 
 import java.util.EnumSet;
 import java.util.Iterator;
 
 public enum Item {
-	//TODO: have the prices of the items populate from either a config/excel file that
-	//is easier to read and doesnt require changing code or maybe input from a gui
 	APPLE			(360),
 	STRAWBERRY		(105),
 	CHERRY			(255),
@@ -20,11 +18,15 @@ public enum Item {
 	BLUEBERRY		(41),
 	BANANA			(90);
 	
-	private final int price;
+	private int price;
 
 	Item(int price) {
         this.price = price;
     }	
+	
+	public void setPrice(int price) {
+		this.price = price;
+	}	
 	
 	public int getPrice() {
 		return price;

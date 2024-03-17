@@ -3,6 +3,8 @@ package tradepackhelper.tradepack;
 import java.util.HashMap;
 import java.util.Map;
 
+import tradepackhelper.item.Item;
+
 public class SajechoFruitBasket extends Tradepack {
 
 	public SajechoFruitBasket() {

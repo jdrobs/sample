@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import tradepackhelper.Place;
+import tradepackhelper.place.Place;
 
 public class DynamicGUIExample {
 
