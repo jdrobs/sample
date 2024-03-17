@@ -5,6 +5,9 @@ import java.util.Map;
 
 import tradepackhelper.item.Item;
 
+/**
+ * Sajecho Fruit Basket {@link Tradepack}
+ */
 public class SajechoFruitBasket extends Tradepack {
 
 	public SajechoFruitBasket() {

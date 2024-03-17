@@ -5,6 +5,9 @@ import java.util.Map;
 
 import tradepackhelper.item.Item;
 
+/**
+ * Seabreeze Rum {@link Tradepack}
+ */
 public class SeabreezeRum extends Tradepack {
 
 	public SeabreezeRum() {

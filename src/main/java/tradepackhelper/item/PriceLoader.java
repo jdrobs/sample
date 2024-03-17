@@ -12,6 +12,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Utility class that provides the ability to load prices for an {@link Item} from a spreadsheet. 
+ */
 public class PriceLoader {
 
 	// TODO: Move the hardcoded path to a settings file
@@ -21,7 +24,10 @@ public class PriceLoader {
 		// use the default filepath
 	}
 	
-	// if an alternative file path is needed
+	/**
+	 * If an alternative file path is needed
+	 * @param filePath
+	 */
 	public PriceLoader(String filePath) {
 		this.filePath = filePath;
 	}
@@ -34,6 +40,13 @@ public class PriceLoader {
 		this.filePath = filePath;
 	}
 
+	/**
+	 * Opens the spreadsheet and looks for the price for the specified item. The most recent price
+	 * should be placed on the bottom of the column and it will return -1 if the item isnt found.
+	 * @param itemName - item to load price from excel file
+	 * @return the most updated price
+	 * @throws IOException
+	 */
 	public int loadPrice(String itemName) throws IOException {
 		int price = -1; // Default value if column not found or no values in column
 		FileInputStream inputStream = new FileInputStream(filePath);
@@ -63,6 +76,7 @@ public class PriceLoader {
 		return price;
 	}
 
+	// find the column that has the price data for the specified item
 	private int findColumnIndex(Sheet sheet, String itemName) {
 		Row firstRow = sheet.getRow(0);
 		int columnCount = firstRow.getLastCellNum();
@@ -76,6 +90,11 @@ public class PriceLoader {
 		return -1;
 	}
 
+	/**
+	 * Reorders the columns of the spreadsheet so that they are alphabetical. Purely cosmetic 
+	 * change and just makes it easier to find things when updating prices in the spreadsheet.
+	 * @throws IOException
+	 */
 	public void reorderColumnsAlphabetically() throws IOException {
 		FileInputStream inputStream = new FileInputStream(filePath);
 		Workbook workbook = WorkbookFactory.create(inputStream);

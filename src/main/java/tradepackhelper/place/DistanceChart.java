@@ -2,12 +2,20 @@ package tradepackhelper.place;
 
 import java.util.EnumMap;
 
+/**
+ * Utility class that stores the various distances between the {@link Place Places}
+ */
 public class DistanceChart {
 
 	//Map to store distances
 	private EnumMap<Place, EnumMap<Place, Integer>> distances;
 
-	//Constructor to initialize and populate the chart
+	
+	/**
+	 * DistanceChart has the EnumMap that contains distances between the places. When 
+	 * adding a new place, only one direction of distances is needed as the distance 
+	 * from A to B is equal to the distance from B to A.
+	 */
 	public DistanceChart() {
 		setDistances(new EnumMap<>(Place.class));
 		for (Place from : Place.values()) {
@@ -48,7 +56,12 @@ public class DistanceChart {
 
 	}
 
-	//Method to get the distance between two places
+	/**
+	 * Gets the distance between two places. 
+	 * @param from - the place where the pack is starting from
+	 * @param to - the destination where the pack will be sold
+	 * @return int that represents the amount of tiles between the two locations
+	 */
 	public int getDistance(Place from, Place to) {
 		if (from == null || to == null) 
 			return 0;

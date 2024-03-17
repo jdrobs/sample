@@ -3,6 +3,11 @@ package tradepackhelper.tradepack;
 import tradepackhelper.place.DistanceChart;
 import tradepackhelper.place.Place;
 
+/**
+ * Utility class that provides the ability to do calculations for 
+ * {@link tradepackhelper.tradepack.Tradepack Tradepacks}
+ * based either on demand or on minimum profit desired.
+ */
 public class TradepackCalculator {
 
 	// modifiers for the value of tradepacks
@@ -12,8 +17,14 @@ public class TradepackCalculator {
 
 	DistanceChart dist = new DistanceChart();
 
-	// calculate the base value of the pack from starting to ending
-	// if start and end location are the same, value is 0
+	/**
+	 * Calculates the base value of the {@link tradepackhelper.tradepack.Tradepack Tradepack} which is the price a pack would sell
+	 * for with no modifiers given the distance between to starting and ending {@link tradepackhelper.place.Place Places}.
+	 * If the start and end are equal, the result is 0
+	 * @param from - starting {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @param to - ending {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @return double representing the value
+	 */
 	public double calculateBaseValue(Place from, Place to) {
 		if (from.equals(to))
 			return 0;
@@ -21,9 +32,14 @@ public class TradepackCalculator {
 		return 0.8 * ((8 * dist.getDistance(from, to)) + 12000);
 	}
 
-	// calculates the value of the pack from starting to ending
-	// if any multipliers are active, it factors those in before the return
-	// if start and end location are the same, value is 0
+	/**
+	 * Calculates the value of the {@link tradepackhelper.tradepack.Tradepack Tradepack} which is the price a pack would sell
+	 * for with modifiers given the distance between to starting and ending {@link tradepackhelper.place.Place Places}.
+	 * If the start and end are equal, the result is 0
+	 * @param from - starting {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @param to - ending {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @return double representing the value
+	 */
 	public double calculateValue(Place from, Place to) {
 		if (from.equals(to))
 			return 0;
@@ -43,12 +59,27 @@ public class TradepackCalculator {
 		return multiplier * base;
 	}
 
-	// profit is calculated as demand times value minus the cost to create
+	/**
+	 * profit is calculated as demand times value minus the cost to create
+	 * @param demand - the demand for the current {@link tradepackhelper.tradepack.Tradepack Tradepack} at the ending {@link tradepackhelper.place.Place Place}
+	 * @param pack - the {@link tradepackhelper.tradepack.Tradepack Tradepack} to do the calculations for
+	 * @param from - starting {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @param to - ending {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @return int representing how much profit 
+	 */
 	public int calculateProfit(int demand, Tradepack pack, Place from, Place to) {
 		return (int) Math.floor(((demand * calculateValue(from, to)) / 100) - pack.getCost());
 	}
 
-	// calculate how much demand is needed to give us at least the profit desired
+	// 
+	/**
+	 * calculate how much demand is needed to give us at least the profit desired
+	 * @param profit - the desired amount of profit
+	 * @param pack - the {@link tradepackhelper.tradepack.Tradepack Tradepack} to to the calculations for
+	 * @param from - starting {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @param to - ending {@link tradepackhelper.place.Place Place} for {@link tradepackhelper.tradepack.Tradepack Tradepack}
+	 * @return int representing how much demand results in specified profit
+	 */
 	public int calculateMinDemandForProfit(int profit, Tradepack pack, Place from, Place to) {
 		return (int) Math.round(100 * (profit + pack.getCost()) / calculateValue(from, to));
 	}

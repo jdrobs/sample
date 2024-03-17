@@ -3,6 +3,10 @@ package tradepackhelper.item;
 import java.util.EnumSet;
 import java.util.Iterator;
 
+/**
+ * The various items that are used in creating the various {@link tradepackhelper.tradepack.Tradepack Tradepack}. Each item has a price
+ * which is how much it costs to purchase it from the market.
+ */
 public enum Item {
 	APPLE			(360),
 	STRAWBERRY		(105),

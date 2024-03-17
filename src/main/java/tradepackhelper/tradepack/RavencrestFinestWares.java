@@ -5,6 +5,9 @@ import java.util.Map;
 
 import tradepackhelper.item.Item;
 
+/**
+ * Ravencrest Finest Wares {@link Tradepack}
+ */
 public class RavencrestFinestWares extends Tradepack {
 
 	public RavencrestFinestWares() {

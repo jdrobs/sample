@@ -5,6 +5,9 @@ import java.util.Map;
 
 import tradepackhelper.item.Item;
 
+/**
+ * Juicers Box {@link Tradepack}
+ */
 public class JuicersBox extends Tradepack {
 
 	public JuicersBox() {

@@ -5,11 +5,18 @@ import java.util.Map;
 
 import tradepackhelper.item.Item;
 
+/**
+ * Abstract class representing tradepacks. Contains a list of {@link tradepackhelper.item.Item Items}
+ * and a method of getting the cost of the tradepack given current prices.
+ */
 public abstract class Tradepack {
 	Map<Item, Integer> items = null;
-	int cost;
 
-	// get the cost of making the tradepack given the current market prices
+	/**
+	 * Gets the cost of making the tradepack given the current prices of the {@link tradepackhelper.item.Item Items}. 
+	 * Sums the total of item prices * quantity of those items.
+	 * @return int representing the cost
+	 */
 	public int getCost() {
 		int totalPrice = 0;
 
