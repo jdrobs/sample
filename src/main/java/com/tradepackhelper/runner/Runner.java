@@ -1,16 +1,16 @@
-package tradepackhelper.runner;
+package com.tradepackhelper.runner;
 
 import java.io.IOException;
 import java.util.Iterator;
 
-import tradepackhelper.item.Item;
-import tradepackhelper.item.PriceLoader;
-import tradepackhelper.place.Place;
-import tradepackhelper.tradepack.JuicersBox;
-import tradepackhelper.tradepack.RavencrestFinestWares;
-import tradepackhelper.tradepack.SajechoFruitBasket;
-import tradepackhelper.tradepack.SeabreezeRum;
-import tradepackhelper.tradepack.TradepackCalculator;
+import com.tradepackhelper.item.Item;
+import com.tradepackhelper.item.PriceLoader;
+import com.tradepackhelper.place.Place;
+import com.tradepackhelper.tradepack.JuicersBox;
+import com.tradepackhelper.tradepack.RavencrestFinestWares;
+import com.tradepackhelper.tradepack.SajechoFruitBasket;
+import com.tradepackhelper.tradepack.SeabreezeRum;
+import com.tradepackhelper.tradepack.TradepackCalculator;
 
 public class Runner {
 

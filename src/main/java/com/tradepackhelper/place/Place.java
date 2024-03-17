@@ -1,10 +1,10 @@
-package tradepackhelper.place;
+package com.tradepackhelper.place;
 
 import java.util.EnumSet;
 import java.util.Iterator;
 
 /**
- * The various places where a {@link tradepackhelper.tradepack.Tradepack Tradepack} can be created and delivered.
+ * The various places where a {@link com.tradepackhelper.tradepack.Tradepack Tradepack} can be created and delivered.
  */
 public enum Place {
 	MARGROVE, 

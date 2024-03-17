@@ -1,9 +1,9 @@
-package tradepackhelper.tradepack;
+package com.tradepackhelper.tradepack;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import tradepackhelper.item.Item;
+import com.tradepackhelper.item.Item;
 
 /**
  * Juicers Box {@link Tradepack}

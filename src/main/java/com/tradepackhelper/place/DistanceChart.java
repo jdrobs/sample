@@ -1,4 +1,4 @@
-package tradepackhelper.place;
+package com.tradepackhelper.place;
 
 import java.util.EnumMap;
 
@@ -58,8 +58,8 @@ public class DistanceChart {
 
 	/**
 	 * Gets the distance between two {@link Place Places}. 
-	 * @param from - the {@link Place} where the {@link tradepackhelper.tradepack.Tradepack Tradepack} is starting from
-	 * @param to - the {@link Place} where the {@link tradepackhelper.tradepack.Tradepack Tradepack} will be sold
+	 * @param from - the {@link Place} where the {@link com.tradepackhelper.tradepack.Tradepack Tradepack} is starting from
+	 * @param to - the {@link Place} where the {@link com.tradepackhelper.tradepack.Tradepack Tradepack} will be sold
 	 * @return int that represents the amount of tiles between the two {@link Place Places}
 	 */
 	public int getDistance(Place from, Place to) {

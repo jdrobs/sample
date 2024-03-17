@@ -1,9 +1,9 @@
-package tradepackhelpertest;
+package com.tradepackhelpertest;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import tradepackhelper.item.PriceLoader;
+import com.tradepackhelper.item.PriceLoader;
 
 import java.io.IOException;
 import static org.junit.Assert.*;

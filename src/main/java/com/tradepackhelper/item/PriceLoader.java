@@ -1,4 +1,4 @@
-package tradepackhelper.item;
+package com.tradepackhelper.item;
 
 import org.apache.poi.ss.usermodel.*;
 

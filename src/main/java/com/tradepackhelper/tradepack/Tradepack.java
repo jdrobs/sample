@@ -1,19 +1,19 @@
-package tradepackhelper.tradepack;
+package com.tradepackhelper.tradepack;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import tradepackhelper.item.Item;
+import com.tradepackhelper.item.Item;
 
 /**
- * Abstract class representing tradepacks. Contains a list of {@link tradepackhelper.item.Item Items}
+ * Abstract class representing tradepacks. Contains a list of {@link com.tradepackhelper.item.Item Items}
  * and a method of getting the cost of the tradepack given current prices.
  */
 public abstract class Tradepack {
 	Map<Item, Integer> items = null;
 
 	/**
-	 * Gets the cost of making the tradepack given the current prices of the {@link tradepackhelper.item.Item Items}. 
+	 * Gets the cost of making the tradepack given the current prices of the {@link com.tradepackhelper.item.Item Items}. 
 	 * Sums the total of item prices * quantity of those items.
 	 * @return int representing the cost
 	 */

@@ -1,9 +1,9 @@
-package tradepackhelpertest;
+package com.tradepackhelpertest;
 
 import org.junit.Test;
 
-import tradepackhelper.place.DistanceChart;
-import tradepackhelper.place.Place;
+import com.tradepackhelper.place.DistanceChart;
+import com.tradepackhelper.place.Place;
 
 import static org.junit.Assert.*;
 

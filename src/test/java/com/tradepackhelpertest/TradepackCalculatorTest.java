@@ -1,9 +1,9 @@
-package tradepackhelpertest;
+package com.tradepackhelpertest;
 
 import org.junit.Test;
 
-import tradepackhelper.place.Place;
-import tradepackhelper.tradepack.TradepackCalculator;
+import com.tradepackhelper.place.Place;
+import com.tradepackhelper.tradepack.TradepackCalculator;
 
 import static org.junit.Assert.*;
 
