@@ -17,8 +17,6 @@ public class Runner {
 	static PriceLoader loader;
 	static TradepackCalculator calc;
 
-	// TODO: Load the config below from a config or settings file
-
 	// modifiers for the starting, ending locations and how much profit
 	static Place start = Place.MARGROVE;
 	static Place end = Place.DEFIANCE;
@@ -33,7 +31,7 @@ public class Runner {
 
 		// initialize the utilities
 		loader = new PriceLoader();
-		calc = new TradepackCalculator();
+		calc = new TradepackCalculator(warmode, perk1, perk2);
 
 		// update the prices based on the itemprices.xlsx spreadsheet
 		try {

@@ -88,6 +88,12 @@ public class TradepackCalculator {
 	public TradepackCalculator() {
 
 	}
+	
+	public TradepackCalculator(boolean warmode, boolean perk1, boolean perk2) {
+		this.warmode = warmode;
+		this.perk1 = perk1;
+		this.perk2 = perk2;
+	}
 
 	public boolean isWarmode() {
 		return warmode;
